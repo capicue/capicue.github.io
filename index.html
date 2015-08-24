@@ -2,18 +2,33 @@
 layout: default
 ---
 
-<div class="home">
-  <h1>Posts</h1>
+<div id="index">
+  <header>
+    <img class="logo" src="/assets/sunset-small.png">
+  </header>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="content container-fluid">
+    <div class="row-fluid">
+      {% for post in site.posts %}
+        <div class="col-md-6 col-lg-4">
+          <div class="post-card">
+            <a href="{{ post.url }}">
+              <div class="post-card-content">
+                <div class="post-card-title">
+                  {{ post.title }}
+                </div>
+                <div class="post-card-excerpt">
+                  {{ post.excerpt }}
+                </div>
+              </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+              <div class="post-card-footer">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

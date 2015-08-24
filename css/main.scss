@@ -2,7 +2,121 @@
 # Front matter
 ---
 
-body {
+$background-color: #f9f9f9;
+$border-color: #dddddd;
+$dark-grey: #555555;
+
+@import "/assets/bootstrap/css/bootstrap.css";
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('/assets/fonts/cmunrm.eot');
+	src: url('/assets/fonts/cmunrm.eot?#iefix') format('embedded-opentype'),
+		 url('/assets/fonts/cmunrm.woff') format('woff'),
+		 url('/assets/fonts/cmunrm.ttf') format('truetype'),
+		 url('/assets/fonts/cmunrm.svg#cmunrm') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-@import "../assets/bootstrap/css/bootstrap.css"
+body, html {
+  font-family: "Open Sans", sans-serif;
+  background-color: $background-color;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+#index {
+  header {
+    background-color: white;
+    text-align: center;
+    padding: 40px 0px;
+    border-bottom: 1px solid $border-color;
+    img.logo {
+      width: 100px;
+    }
+  }
+
+  .content {
+    padding: 20px 0;
+  }
+}
+
+#post {
+  header {
+    background-color: white;
+    border-bottom: 1px solid $border-color;
+    padding: 10px;
+
+    img.logo {
+      height: 50px;
+    }
+  }
+  .content {
+    max-width: 800px;
+    margin: 0px auto;
+  }
+  .post {
+    padding-top: 20px;
+    margin: 0px 20px;
+
+    h1.post-title {
+      font-weight: bold;
+      font-size: 200%;
+    }
+
+    .post-meta {
+      font-style: italic;
+      font-size: 80%;
+    }
+
+    article {
+      padding-top: 40px;
+      font-family: "Computer Modern Serif", serif;
+      font-size: 18px;
+    }
+  }
+}
+
+.post-card {
+  background-color: white;
+  margin-bottom: 40px;
+
+  a {
+    color: black;
+  }
+
+  .post-card-content {
+    padding: 20px;
+
+    .post-card-title {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 200%;
+      margin-bottom: 10px;
+    }
+
+    .post-card-excerpt {
+      font-family: "Computer Modern Serif", serif;
+      height: 100px;
+      color: $dark-grey;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .post-card-footer {
+    font-style: italic;
+    font-size: 80%;
+    padding: 10px 20px;
+    border-top: 1px solid $border-color;
+  }
+}
+
