@@ -1,0 +1,17 @@
+.post {
+  padding-top: 20px;
+  margin: 0px 20px;
+
+  .post-meta {
+    font-style: italic;
+  }
+
+  article {
+    font-family: "Computer Modern Serif", serif;
+    font-size: 18px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

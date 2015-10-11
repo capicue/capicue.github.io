@@ -1,0 +1,34 @@
+.post-card {
+  background-color: white;
+  margin-bottom: 40px;
+
+  a {
+    color: black;
+  }
+
+  .post-card-content {
+    padding: 20px;
+
+    .post-card-title {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 200%;
+      margin-bottom: 10px;
+    }
+
+    .post-card-excerpt {
+      font-family: "Computer Modern Serif", serif;
+      height: 100px;
+      color: $dark-grey;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .post-card-footer {
+    font-style: italic;
+    font-size: 80%;
+    padding: 10px 20px;
+    border-top: 1px solid $border-color;
+  }
+}
